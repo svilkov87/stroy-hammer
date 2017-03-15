@@ -34,7 +34,7 @@ gulp.task('sass', function () {
     }))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(cleanCSS()) //минифицируем css
-    .pipe(rename('libs.min.css'))//как назовем скомпилированный min- файл
+    .pipe(rename('style.min.css'))//как назовем скомпилированный min- файл
     .pipe(gulp.dest('app/css'))//куда выкладываем итоговый файл
     .pipe(connect.reload());
 });
@@ -43,7 +43,7 @@ gulp.task('sass', function () {
 
 //js
 gulp.task('scripts', function() {
-  return gulp.src('app/libs/main.js')
+  return gulp.src('app/js/main.js')
     .pipe(concat('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
@@ -57,12 +57,11 @@ gulp.task('html', function () {
 });
 
 
-//автом вызов галп при любом изменении css-файлов
+//автом вызов галп при любом изменении следующих файлов
 gulp.task('watch', function () {
     // gulp.watch('app/css/*css', ['css']) //следим за изменениями всех css, и при их изменении запускаем таск css
 	gulp.watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], ['sass']) //следим за изменениями всех css, и при их изменении запускаем таск css
-	// gulp.watch('app/jade/index.jade', ['jade'])
-	gulp.watch('app/libs/*.js', ['scripts'])
+	gulp.watch('app/js/*.js', ['scripts'])
 	gulp.watch('app/*.html', ['html']);
 });
 
@@ -88,23 +87,13 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-// gulp.task('img', function() {
-//     return gulp.src('app/img/**/*')
-//         .pipe(imagemin({
-//         	use: [imageminJpegtran()],
-//         	use: [imageminOptipng()]
-//         }))
-//         .pipe(gulp.dest('dist/images'));
-// 	});
-
 //в продакшн
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
-
-	var buildCss = gulp.src(['app/css/libs.min.css'])
+	var buildCss = gulp.src(['app/css/style.min.css'])
 	.pipe(gulp.dest('dist/css'));
 
-	// var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-	// .pipe(gulp.dest('dist/fonts'));
+	var buildFonts = gulp.src('app/libs/fonts/**/*') // Переносим шрифты в продакшен
+	.pipe(gulp.dest('dist/libs/fonts'));
 
 	var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
 	.pipe(gulp.dest('dist/js'));
