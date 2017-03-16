@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   //выпадающий блок "о нас"
-  $("#about_us").click(function(){
-    $(".about-ul").slideToggle(100);
+  $("#show_nav").click(function(){
+    $(".ul_menu").slideToggle(100);
   });
 
     //выпадающий доп меню в лк (навигация)
@@ -123,19 +123,19 @@ $(document).ready(function(){
 
 
 //modalPrice
-var linkPrice = document.getElementById('linkPrice'),
-    myPrice = document.getElementById('myPrice'),
-    closePrice = document.getElementsByClassName('closePrice')[0];
+// var linkPrice = document.getElementById('linkPrice'),
+//     myPrice = document.getElementById('myPrice'),
+//     closePrice = document.getElementsByClassName('closePrice')[0];
 
-linkPrice.onclick = function () {
-    myPrice.style.display = "block";
-}
-closePrice.onclick = function () {
-    myPrice.style.display = "none";
-}
-//закрытие модал, если юзер кликает на bg
-window.onclick = function (event) {
-    if (event.target == myPrice) {
-        myPrice.style.display = "none";
-    }
-}
+// linkPrice.onclick = function () {
+//     myPrice.style.display = "block";
+// }
+// closePrice.onclick = function () {
+//     myPrice.style.display = "none";
+// }
+// //закрытие модал, если юзер кликает на bg
+// window.onclick = function (event) {
+//     if (event.target == myPrice) {
+//         myPrice.style.display = "none";
+//     }
+// }

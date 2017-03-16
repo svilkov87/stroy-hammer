@@ -3,7 +3,85 @@
 @import 'base/mixins';
 @import 'base/reset';
 
-p{
-  color: #bbb;
-  padding: 35px;
+//главная
+.nav{
+	height: 80px;
+	.logo_block{
+		height: auto;
+		p.logo_p{
+			line-height: 80px;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: bold;
+			@include mobile_m{
+				line-height: 65px;
+			}
+		}
+	}
+	.nav_info{
+		float: right;
+		height: auto;
+		@include mobile_l{
+			float: none;
+
+		}
+		.adress_info{
+			margin-top: 25px;
+			@include mobile_l{
+				margin: 10px 0;
+			}
+			span{
+				display: block;
+			}
+		}
+	}
+	.nav_bottom{
+		height: 60px;
+		background: #444050;
+		.fa-bars{
+			color: #fff;
+			line-height: 60px;
+			display: none;
+			@include tablet_max{
+				display: block;
+				margin-left: 15px;
+			}
+		}
+		.ul_menu{
+			float: left;
+			@include mobile_l{
+				display: none;
+				background: #444050;
+				width: 100%;
+				padding-bottom: 20px;
+			}
+			@include tablet_max{
+				width: 100%;
+				padding-bottom: 20px;
+				background: #444050;
+			}
+			.li_nav{
+				float: left;
+				margin-right: 5px;
+				@include mobile_l{
+					float: none;
+				}
+				a{
+					display: block;
+					line-height: 60px;
+					padding: 0 10px;
+					color: #fff;
+					text-transform: uppercase;
+					@include mobile_l{
+						line-height: 0;
+						padding: 15px;
+					}
+					&:hover{
+						background: #F9E302;
+						color: #000;
+					}
+				}
+			}
+		}
+	}
 }

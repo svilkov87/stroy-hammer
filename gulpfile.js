@@ -4,7 +4,7 @@ var gulp = require('gulp'),// подключение галп
 	sass = require('gulp-sass'),
     //hash
     rev_append = require('gulp-rev-append'),
-    rev = require('gulp-rev'),
+    rev = require('gulp-rev'),//
     revCollector = require('gulp-rev-collector'),
     revOutdated = require('gulp-rev-outdated'),
     gutil  = require('gulp-util'),
@@ -36,54 +36,55 @@ var gulp = require('gulp'),// подключение галп
 	});
 
 //hash
-gulp.task('rev_append', function() {
-    gulp.src('app/*.html')
-        .pipe(rev_append())
-        .pipe(gulp.dest('app/'));
-});
+// gulp.task('rev_append', function() {
+//     gulp.src('app/*.html')
+//         .pipe(rev_append())
+//         .pipe(gulp.dest('app/'));
+// });
 
-gulp.task('rev', function () {
-    return gulp.src('app/sass/**/*.scss')
-        .pipe(sass())
-        .pipe(cleanCSS()) //минифицируем css
-        .pipe(rev())
-        .pipe(gulp.dest('app/css/'))
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('app/manifests/'));
-});
+// gulp.task('rev', function () {
+//     return gulp.src('app/sass/**/*.scss')
+//         .pipe(sass())
+//         .pipe(cleanCSS()) //минифицируем css
+//         .pipe(rev())
+//         .pipe(gulp.dest('app/css/'))
+//         .pipe(rev.manifest())
+//         .pipe(gulp.dest('app/manifests/'));
+// });
 
-gulp.task('rev_collector', ['rev'], function () {
-    return gulp.src(['app/manifests/**/*.json', 'app/*.html'])//?
-        .pipe( revCollector({
-            replaceReved: true
-        }) )
-        .pipe( gulp.dest('app/') );
-});
+// gulp.task('rev_collector', ['rev'], function () {
+//     return gulp.src(['app/manifests/**/*.json', 'app/*.html', '/*.php'])//?
+//         .pipe( revCollector({
+//             replaceReved: true
+//         }) )
+//         .pipe( gulp.dest('app/') );
+// });
 
-function cleaner() {
-    return through.obj(function(file, enc, cb){
-        rimraf( path.resolve( (file.cwd || process.cwd()), file.path), function (err) {
-            if (err) {
-                this.emit('error', new gutil.PluginError('Cleanup old files', err));
-            }
-            this.push(file);
-            cb();
-        }.bind(this));
-    });
-}
+// function cleaner() {
+//     return through.obj(function(file, enc, cb){
+//         rimraf( path.resolve( (file.cwd || process.cwd()), file.path), function (err) {
+//             if (err) {
+//                 this.emit('error', new gutil.PluginError('Cleanup old files', err));
+//             }
+//             this.push(file);
+//             cb();
+//         }.bind(this));
+//     });
+// }
 
-gulp.task('cleanHash', ['rev_collector'], function() {
-    gulp.src( ['app/**/*.*'], {read: false})
-        .pipe( revOutdated(1) ) // leave 1 latest asset file for every file name prefix.
-        .pipe( cleaner() );
+// gulp.task('cleanHash', ['rev_collector'], function() {
+//     gulp.src( ['app/**/*.*'], {read: false})
+//         .pipe( revOutdated(1) ) // leave 1 latest asset file for every file name prefix.
+//         .pipe( cleaner() );
 
-    return;
-});
+//     return;
+// });
 
-gulp.task('rev_all', ['rev_collector', 'rev', 'cleanHash']);
+// gulp.task('rev_all', ['rev_collector', 'rev', 'cleanHash']);
 
 //sass и css
-gulp.task('sass', ['rev_all'], function () {
+gulp.task('sass', function () {
+// gulp.task('sass', ['rev_all'], function () {
   return gulp.src(['app/sass/**/*.sass', 'app/sass/**/*.scss'])//путь к папке с файлами, м которыми будем работать
     .pipe(autoprefixer({
         browsers: ['last 15 versions']
@@ -113,7 +114,6 @@ gulp.task('html', function () {
 
 //автом вызов галп при любом изменении следующих файлов
 gulp.task('watch', function () {
-    // gulp.watch('app/css/*css', ['css']) //следим за изменениями всех css, и при их изменении запускаем таск css
 	gulp.watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], ['sass']) //следим за изменениями всех css, и при их изменении запускаем таск css
 	gulp.watch('app/js/*.js', ['scripts'])
 	gulp.watch('app/*.html', ['html']);

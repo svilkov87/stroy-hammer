@@ -4,14 +4,7 @@
 	<meta charset="UTF-8"> 
 	<title>stroy-hammer</title>
 	<meta name="description" content="IMPOVAR" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/main.min.css">
-	<script type="text/javascript" src="libs/wow.min.js"></script>
+	<?php include("include/head.php");?>
 </head>
 <body>
 <div class="nav">
@@ -50,13 +43,13 @@
 </div>
 
 <!--[if lt IE 9]-->
-<script src="libs/html5shiv/es5-shim.min.js"></script>
-<script src="libs/html5shiv/html5shiv.min.js"></script>
-<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-<script src="libs/respond/respond.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/html5shiv/es5-shim.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/html5shiv/html5shiv.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/respond/respond.min.js"></script>
 <!--[endif]-->
-<script src="libs/jquery/jquery-1.11.1.min.js"></script>
-<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
-<script src="js/main.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/jquery/jquery-1.11.1.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/libs/scrollto/jquery.scrollTo.min.js"></script>
+<script src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/js/main.js"></script>
 </body>
 </html>
