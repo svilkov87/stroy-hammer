@@ -11,6 +11,25 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery.bxslider/jquery.bxslider.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+  	            mode: 'fade',           // тип перехода между слайдами может быть 'horizontal', 'vertical', 'fade'
+            captions: true,         // отображение title
+            easing: 'easeInOutQuad',// анимация слайда
+            controls: true,         // отображение стрелки - вперед, назад
+            startSlide: 0,          // Показ начнется с заданного слайда
+            infiniteLoop: true,     // показывать первый слайд за последним 
+            auto: true,             // сделать автоматический переход
+            pause: 4000,            // время между сменой слайдов в м-сек
+            speed: 500,             // длительность перехода слайда в м-сек
+            useCSS: false           // CSS переходы
+        });
+		});
+	</script>
+	<link href="libs/jquery.bxslider/jquery.bxslider.css" rel="stylesheet">
 	<script type="text/javascript" src="libs/wow.min.js"></script>
 </head>
 <body>
@@ -48,6 +67,19 @@
 		</div>
 	</div>
 </div>
+<div class="wrapp_slider">
+	<div class="container-fluid">
+		<div class="row">
+			<ul class="bxslider">
+				<li><img src="http://www.elitecleaners.co.uk/wp-content/uploads/2012/02/house-cleaning1.jpg"></li>
+				<li><img src="http://zar-remont.ru/assets/common/11-94bc08e66ddc0fac0edf5f619c5e74e4.jpg"></li>
+				<li><img src="http://mebel-fox.by/wp-content/uploads/2015/09/prihojaya-1024x500.jpg"></li>
+				<li><img src="http://indiareel.com/mmk/images/purple.jpg"></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
 
 <!--[if lt IE 9]-->
 <script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -55,8 +87,9 @@
 <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 <script src="libs/respond/respond.min.js"></script>
 <!--[endif]-->
-<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+<!-- <script src="libs/jquery/jquery-1.11.1.min.js"></script> -->
 <script src="libs/scrollto/jquery.scrollTo.min.js"></script>
 <script src="js/main.js"></script>
+</script>
 </body>
 </html>

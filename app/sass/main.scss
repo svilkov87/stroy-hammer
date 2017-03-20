@@ -5,7 +5,7 @@
 
 //главная
 .nav{
-	height: 80px;
+	height: auto;
 	.logo_block{
 		height: auto;
 		p.logo_p{
@@ -85,3 +85,24 @@
 		}
 	}
 }
+//slider
+.wrapp_slider{
+	.bxslider{
+		img{
+			width: 100%;
+			height: 500px;
+			@include tablet_max{
+				height: auto;
+			}
+		}
+		.inner_slider{
+			color: #fff;
+			display: block;
+			z-index: 9999999999999;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+

@@ -110,12 +110,17 @@ gulp.task('html', function () {
 	gulp.src('app/*.html')
 	.pipe(connect.reload());
 });
-
+//css
+gulp.task('css', function () {
+	gulp.src('app/libs/jquery.bxslider/*.css')
+	.pipe(connect.reload());
+});
 
 //автом вызов галп при любом изменении следующих файлов
 gulp.task('watch', function () {
 	gulp.watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], ['sass']) //следим за изменениями всех css, и при их изменении запускаем таск css
 	gulp.watch('app/js/*.js', ['scripts'])
+	gulp.watch('app/libs/jquery.bxslider/*.css', ['css'])
 	gulp.watch('app/*.html', ['html']);
 });
 
@@ -158,7 +163,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 });
 
 //задачи по-умолчанию
-gulp.task('default', ['connect', 'watch','sass', 'html','scripts']);
+gulp.task('default', ['connect', 'watch','sass', 'css', 'html','scripts']);
 
 
 
