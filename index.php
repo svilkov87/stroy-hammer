@@ -30,15 +30,22 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
 				<div class="logo_block">
+                    <img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/logo_hammer_1.svg">
 					<p class="logo_p">stroy hammer</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<div class="nav_info">
-					<div class="adress_info">
-						<span class="tel">8 800 000 000</span>
-						<span class="adress">Нижний Новгород</span>
-					</div>
+                    <div class="adress_info">
+                        <div class="adress_item">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span class="tel">8 800 000 000</span>
+                        </div>
+                        <div class="adress_item">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span class="adress">Нижний Новгород</span>
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -62,20 +69,36 @@
 <div class="wrapp_slider">
 	<div class="container-fluid">
 		<div class="row">
-			<ul class="bxslider">
-				<li><img src="http://www.elitecleaners.co.uk/wp-content/uploads/2012/02/house-cleaning1.jpg">
-				<p class="inner_slider">TExt test test</p>
-				</li>
-				<li><img src="http://zar-remont.ru/assets/common/11-94bc08e66ddc0fac0edf5f619c5e74e4.jpg">
-				<p class="inner_slider">TExt test test</p>
-				</li>
-				<li><img src="http://mebel-fox.by/wp-content/uploads/2015/09/prihojaya-1024x500.jpg">
-				<p class="inner_slider">TExt test test</p>
-				</li>
-				<li><img src="http://indiareel.com/mmk/images/purple.jpg">
-<p class="inner_slider">TExt test test</p>
-				</li>
-			</ul>
+            <ul class="bxslider">
+                <li>
+                    <img src="http://www.elitecleaners.co.uk/wp-content/uploads/2012/02/house-cleaning1.jpg">
+                    <div class="content_slider">
+                        <h2 class="header_content_slider">Лучший в мире ремонт</h2>
+                        <p class="inner_slider">Лучший в мире сайт о ремонте...</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://zar-remont.ru/assets/common/11-94bc08e66ddc0fac0edf5f619c5e74e4.jpg">
+                    <div class="content_slider">
+                        <h2 class="header_content_slider">Лучшие в мире работники</h2>
+                        <p class="inner_slider">Лучший в мире Шура</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://mebel-fox.by/wp-content/uploads/2015/09/prihojaya-1024x500.jpg">
+                    <div class="content_slider">
+                        <h2 class="header_content_slider">Лучший в мире СэнСэй</h2>
+                        <p class="inner_slider">Лучший в мире Денис</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://comfortsolutions.com.ua/img/slide-02.jpg">
+                    <div class="content_slider">
+                        <h2 class="header_content_slider">Много денег получим</h2>
+                        <p class="inner_slider">Спасибо за работу!</p>
+                    </div>
+                </li>
+            </ul>
 		</div>
 	</div>
 </div>

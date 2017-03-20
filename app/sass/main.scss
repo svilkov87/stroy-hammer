@@ -3,19 +3,28 @@
 @import 'base/mixins';
 @import 'base/reset';
 
+body{
+  font-family: 'Poppins', sans-serif !important;
+}
 //главная
 .nav{
-	height: auto;
+  height: auto;
+  color: #68717c;
 	.logo_block{
 		height: auto;
+      img{
+        float: left;
+        height: 75px;
+      }
 		p.logo_p{
 			line-height: 80px;
 			font-size: 35px;
 			text-transform: uppercase;
 			font-weight: bold;
-			@include mobile_m{
-				line-height: 65px;
-			}
+          @include mobile_m {
+            line-height: 80px;
+            font-size: 25px;
+          }
 		}
 	}
 	.nav_info{
@@ -23,15 +32,11 @@
 		height: auto;
 		@include mobile_l{
 			float: none;
-
 		}
 		.adress_info{
 			margin-top: 25px;
 			@include mobile_l{
 				margin: 10px 0;
-			}
-			span{
-				display: block;
 			}
 		}
 	}
@@ -49,12 +54,14 @@
 		}
 		.ul_menu{
 			float: left;
-			@include mobile_l{
-				display: none;
-				background: #444050;
-				width: 100%;
-				padding-bottom: 20px;
-			}
+          @include mobile_l {
+            display: none;
+            background: #444050;
+            width: 100%;
+            padding-bottom: 20px;
+            position: absolute;
+            z-index: 99789999999999999;
+          }
 			@include tablet_max{
 				width: 100%;
 				padding-bottom: 20px;
@@ -77,8 +84,7 @@
 						padding: 15px;
 					}
 					&:hover{
-						background: #F9E302;
-						color: #000;
+						background: #8c878c;
 					}
 				}
 			}
@@ -86,22 +92,44 @@
 	}
 }
 //slider
-.wrapp_slider{
-	.bxslider{
-		img{
-			width: 100%;
-			height: 500px;
-			@include tablet_max{
-				height: auto;
-			}
-		}
-		.inner_slider{
-			color: #fff;
-			display: block;
-			z-index: 9999999999999;
-			margin: 0 auto;
-		}
-	}
+.wrapp_slider {
+  .bxslider {
+    img {
+      width: 100%;
+      height: 500px;
+      @include tablet_max {
+        height: auto;
+      }
+    }
+    .content_slider {
+      @include large {
+        color: #fff;
+        position: absolute;
+        display: block;
+        z-index: 9999999999999;
+        margin: 0 auto;
+        top: 20%;
+        left: 20%;
+        .header_content_slider{
+          font-size: 36px;
+          text-transform: uppercase;
+        }
+      }
+      @include mobile_l{
+        color: #fff;
+        position: absolute;
+        display: block;
+        z-index: 9999999999999;
+        margin: 0 auto;
+        top: 20%;
+        left: 11%;
+        .header_content_slider{
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 
