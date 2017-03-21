@@ -21,6 +21,16 @@ $(document).ready(function(){
     $(".menu").fadeToggle(500);
   });
 
+  //могоуровневое меню
+    $('.ul_menu .li_nav').hover(
+        function() {
+        $('ul:first', this).slideDown(150);
+    },
+        function() {
+            $('ul:first', this).slideUp(150);
+        }
+    );
+
     // форма отправки заказа
     $('.btn_modal').click(function(e){
         e.preventDefault();
@@ -120,22 +130,3 @@ $(document).ready(function(){
     });
 
 });
-
-
-//modalPrice
-// var linkPrice = document.getElementById('linkPrice'),
-//     myPrice = document.getElementById('myPrice'),
-//     closePrice = document.getElementsByClassName('closePrice')[0];
-
-// linkPrice.onclick = function () {
-//     myPrice.style.display = "block";
-// }
-// closePrice.onclick = function () {
-//     myPrice.style.display = "none";
-// }
-// //закрытие модал, если юзер кликает на bg
-// window.onclick = function (event) {
-//     if (event.target == myPrice) {
-//         myPrice.style.display = "none";
-//     }
-// }

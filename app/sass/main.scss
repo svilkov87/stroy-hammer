@@ -16,6 +16,9 @@ body{
       img{
         float: left;
         height: 75px;
+        @include mobile_m {
+          height: 50px;
+        }
       }
 		p.logo_p{
 			line-height: 80px;
@@ -23,8 +26,8 @@ body{
 			text-transform: uppercase;
 			font-weight: bold;
           @include mobile_m {
-            line-height: 80px;
-            font-size: 25px;
+            line-height: 50px;
+            font-size: 20px;
           }
 		}
 	}
@@ -67,6 +70,23 @@ body{
 			.li_nav{
 				float: left;
 				margin-right: 5px;
+              .ul_child_serv{
+                display: none;
+                position: absolute;
+                z-index: 9999;
+                //background: #444050;
+                .li_serv{
+                  a{
+                    background: orange;
+                    line-height: 30px;
+                    padding: 5px 10px;
+                    color: #fff;
+                    &:hover{
+                      background: #ffd880;
+                    }
+                  }
+                }
+              }
 				@include mobile_l{
 					float: none;
 				}
