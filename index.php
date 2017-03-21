@@ -102,6 +102,57 @@
 		</div>
 	</div>
 </div>
+<div class="main_wrapp">
+	<div class="container">
+		<div class="row">
+			<div class="main_head">
+				<h1 class="head_title">Услуги по ремонту квартир, домов, офисов в Нижнем Новгороде</h1>
+			</div>
+						<div class="main_advantages">
+				<div class="col-md-3 col-sm-3">
+					<div class="item_adv">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Thumb Up-100.png" alt="Thumb Up-100.png" class="item_img">
+						<div class="item_full_down">
+							<div class="p_wrapp">
+								<p class="p_down_desc">качественно</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<div class="item_adv">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Wrench-100.png" alt="Thumb Up-100.png" class="item_img">
+						<div class="item_full_down">
+							<div class="p_wrapp">
+								<p class="p_down_desc">профессионально</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<div class="item_adv">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/US Dollar-100.png" alt="Thumb Up-100.png" class="item_img">
+						<div class="item_full_down">
+							<div class="p_wrapp">
+								<p class="p_down_desc">недорого</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<div class="item_adv">
+					<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Warranty Card-100.png" alt="" class="item_img">
+						<div class="item_full_down">
+							<div class="p_wrapp">
+								<p class="p_down_desc">гарантия</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php include("include/scripts.php");?>
 </body>
 </html>
