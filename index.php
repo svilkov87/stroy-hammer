@@ -61,6 +61,7 @@
 					<li class="li_nav"><a href="#">цены</a></li>
 					<li class="li_nav"><a href="#">наши работы</a></li>
 					<li class="li_nav"><a href="#">акции</a></li>
+                    <li class="li_nav"><a href="#">подарки</a></li>
 				</ul>
 			</div>
 		</div>
@@ -107,42 +108,65 @@
 		<div class="row">
 			<div class="main_head">
 				<h1 class="head_title">Услуги по ремонту квартир, домов, офисов в Нижнем Новгороде</h1>
-			</div>
-						<div class="main_advantages">
-				<div class="col-md-3 col-sm-3">
+                <p class="as_we_doing">Кототко о том, как мы делаем ремонт:</p>
+            </div>
+			<div class="main_advantages">
+				<div class="col-md-3 col-sm-6">
 					<div class="item_adv">
-						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Thumb Up-100.png" alt="Thumb Up-100.png" class="item_img">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Good Quality-100.png" alt="Thumb Up-100.png" class="item_img">
 						<div class="item_full_down">
+                            <div class="item_full_desc">
+                                <p>Три слова нашем качестве</p>
+                                <p>Три слова нашем качестве</p>
+                                <p>Три слова нашем качестве</p>
+                                <p>Три слова нашем качестве</p>
+                            </div>
 							<div class="p_wrapp">
 								<p class="p_down_desc">качественно</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-3">
+				<div class="col-md-3 col-sm-6">
 					<div class="item_adv">
-						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Wrench-100.png" alt="Thumb Up-100.png" class="item_img">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Wrench-100 (1).png" alt="Thumb Up-100.png" class="item_img">
 						<div class="item_full_down">
+                            <div class="item_full_desc">
+                                <p>Какие мы профессионалы</p>
+                                <p>Какие мы профессионалы</p>
+                                <p>Какие мы профессионалы</p>
+                                <p>Какие мы профессионалы</p>
+                            </div>
 							<div class="p_wrapp">
 								<p class="p_down_desc">профессионально</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-3">
+				<div class="col-md-3 col-sm-6">
 					<div class="item_adv">
-						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/US Dollar-100.png" alt="Thumb Up-100.png" class="item_img">
+						<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Wedding Gift-50.png" alt="Thumb Up-100.png" class="item_img">
 						<div class="item_full_down">
+                            <div class="item_full_desc">
+                                <p>Почему у нас выгодно</p>
+                                <p>Почему у нас выгодно</p>
+                                <p>Почему у нас выгодно</p>
+                                <p>Почему у нас выгодно</p>
+                            </div>
 							<div class="p_wrapp">
-								<p class="p_down_desc">недорого</p>
+								<p class="p_down_desc">100% подарки</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-3">
+				<div class="col-md-3 col-sm-6">
 					<div class="item_adv">
-					<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/Warranty Card-100.png" alt="" class="item_img">
+					<img src="http://<?php echo $_SERVER["HTTP_HOST"];?>/app/img/View Details-100.png" alt="" class="item_img">
 						<div class="item_full_down">
+                            <div class="item_full_desc">
+                                <p>Наша гарантия</p>
+                                <p>Наша гарантия</p>
+                            </div>
 							<div class="p_wrapp">
 								<p class="p_down_desc">гарантия</p>
 							</div>
