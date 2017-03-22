@@ -6,7 +6,6 @@
 	<meta name="description" content="IMPOVAR" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -34,6 +33,46 @@
 	<script type="text/javascript" src="libs/wow.min.js"></script>
 </head>
 <body>
+<!--modal-->
+<div id="myModlal" class="modal">
+    <div class="modal_content">
+        <span class="close">&times;</span>
+        <p>stroy-hammer.ru</p>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="modal_header">
+                    <h1>Предварительный запрос</h1>
+                </div>
+                <div class="modal_wrapp">
+                    <div class="err_block">
+                        Не все поля заполнены
+                    </div>
+                    <div class="modal_confirm">
+                        Благодарим Вас за отклик! В ближайшее время мы с Вами свяжемся.
+                    </div>
+                    <div class="modal_forms">
+                        <form action="" method="post" class="myform">
+                            <div class="name">
+                                <span>Укажите Ваше имя и фамилию</span>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="s_name">
+                                <span>Адрес электронной почты(обязательно)</span>
+                                <input type="text" name="s_name" id="s_name">
+                            </div>
+                            <div class="theme">
+                                <span>Опишите интересующую Вас услугу</span>
+                                <textarea name="theme" id="modal_field" cols="30" rows="10"></textarea>
+                            </div>
+                            <button type="submit" name="enter" class="btn_modal">Отправить запрос</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal-->
 <div class="nav">
 	<div class="container">
 		<div class="row">
@@ -135,7 +174,6 @@
                                 <p>Три слова нашем качестве</p>
                                 <p>Три слова нашем качестве</p>
                                 <p>Три слова нашем качестве</p>
-                                <p>Три слова нашем качестве</p>
                             </div>
 							<div class="p_wrapp">
 								<p class="p_down_desc">качественно</p>
@@ -188,6 +226,52 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="center_head">
+				<h1 class="center_title">Мы реализуем полный комплекс услуг по ремонту и отделке помещений:</h1>
+				<ul>
+					<li>
+						<img src="img/RV Campground-100.png" alt="">
+						<p class="as_we_working">Выезд специалиста на объект</p>
+					</li>
+					<li>
+						<img src="img/Drafting Compass-100 (1).png" alt="">
+						<p class="as_we_working">Осмотр и замер</p>
+					</li>
+					<li>
+						<img src="img/Request Service-100.png" alt="">
+						<p class="as_we_working">Консультация</p>
+					</li>
+					<li>
+						<img src="img/Fill Color-100.png" alt="">
+						<p class="as_we_working">Помощь в подборе материалов</p>
+					</li>
+					<li>
+						<img src="img/Bill-100.png" alt="">
+						<p class="as_we_working">Составление прозрачной сметы</p>
+					</li>
+					<li>
+						<img src="img/Handshake-100.png" alt="">
+						<p class="as_we_working">Заключение договора</p>
+					</li>
+					<li>
+						<img src="img/Wallpaper Roll-100.png" alt="">
+						<p class="as_we_working">Ремонт и отделка</p>
+					</li>
+				</ul>
+<!-- 				<img src="img/RV Campground-100.png" alt="RV Campground-100.png">
+				<p class="as_we_working">Кототко о том, как мы делаем ремонт:</p> -->
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="coose_our">
+				<div class="coose_child">
+					<h2 class="choose_head">Воспользуйтесь нашими услугами!</h2>
+					<p class="choose_desc">Оставьте заявку и мы свяжемся с Вами в ближайшее время.</p>
+					<a href="#" class="send_need">Оставить запрос</a>
 				</div>
 			</div>
 		</div>

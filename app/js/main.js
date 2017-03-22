@@ -24,10 +24,14 @@ $(document).ready(function(){
   //могоуровневое меню
     $('.ul_menu .li_nav').hover(
         function() {
+        $(this).css("background", "#8c878c");
+        $('a', this).css("color", "#fff");
         $('ul:first', this).slideDown(150);
     },
         function() {
-            $('ul:first', this).slideUp(150);
+          $(this).css("background", "#444050");
+          $('a', this).css("color", "#c9c3c3");
+          $('ul:first', this).slideUp(150);
         }
     );
 
@@ -82,10 +86,11 @@ $(document).ready(function(){
     
     //modal
     var modal = document.getElementById('myModlal'),
-        btnModal = document.getElementById('linkModal'),
+        btnModal = document.getElementsByClassName('send_need')[0],
         close = document.getElementsByClassName('close')[0];
 
-    btnModal.onclick = function () {
+    btnModal.onclick = function (event) {
+      event.preventDefault();
         modal.style.display = "block";
     }
     close.onclick = function () {

@@ -6,6 +6,107 @@
 body{
   font-family: 'Poppins', sans-serif !important;
 }
+//modal
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.73);
+  .modal_content{
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 15px;
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    .close{
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        color: red;
+        @include transition(.5s)
+      }
+    }
+    .modal_header{
+      text-align: center;
+      padding: 10px 0;
+      h1{
+        font-size: 22px;
+      }
+    }
+    .modal_wrapp {
+      margin-top: 15px;
+      .modal_confirm{
+        text-align: center;
+        color: red;
+        display: none;
+      }
+      .err_block{
+        display: none;
+        padding: 10px;
+        border: 1px solid rgba(255, 0, 0, 0.46);
+        margin: 5px 0;
+        color: red;
+      }
+      .modal_forms {
+        .name, .s_name, .theme{
+          margin-bottom: 15px;
+        span{
+          font-size: 20px;
+        }
+        #name, #s_name {
+          width: 100%;
+          outline: none;
+          border: 1px solid rgba(204, 204, 204, 0.68);
+          height: 30px;
+          margin: 5px auto;
+          padding: 5px;
+          font-size: 17px;
+          color: #6e8096;
+          @include bradius(2px);
+        }
+        #modal_field {
+          width: 100%;
+          outline: none;
+          border: 1px solid rgba(204, 204, 204, 0.68);
+          height: 180px;
+          margin: 5px auto;
+          padding: 5px;
+          font-size: 17px;
+          color: #6e8096;
+          @include bradius(2px);
+        }
+        }
+        .btn_modal{
+          border: 1px solid #cec9c9;
+		  padding: 15px 10px;
+          background-color: #e1e1e3;
+          color: #000;
+          &:hover {
+            background-color: #cfcfd1;
+            color: #000;
+            @include transition(.3s)
+          }
+        }
+        .btn_modal_err{
+          display: none;
+          border: none;
+          width: 105px;
+          height: 35px;
+          background-color: #e37c73;
+          border-color: #ccc;
+          color: #000;
+        }
+      }
+    }
+  }
+}
 //главная
 .nav{
   height: auto;
@@ -77,12 +178,13 @@ body{
                 //background: #444050;
                 .li_serv{
                   a{
-                    background: orange;
+                    background: #8c878c;
                     line-height: 30px;
                     padding: 5px 10px;
-                    color: #fff;
+                    // color: #fff;
                     &:hover{
                       background: #ffd880;
+                      color: #000;
                     }
                   }
                 }
@@ -102,7 +204,7 @@ body{
 					}
 					&:hover{
 						background: #8c878c;
-						color: #fff;
+						color: #000;
 					}
 				}
 			}
@@ -169,7 +271,7 @@ body{
 }
 //main content
 .main_wrapp{
-	height: 250px;
+	height: auto;
 	.main_head{
 		text-align: center;
 		margin-bottom: 15px;
@@ -185,6 +287,8 @@ body{
       }
 	}
 	.main_advantages{
+		margin-bottom: 35px;
+		overflow: hidden;
 		.item_adv{
 			height: 250px;
 			margin-bottom: 10px;
@@ -235,6 +339,64 @@ body{
 			}
 		}
 	}
+	.center_head{
+		text-align: center;
+		margin: 15px 0;
+		padding: 0 15px;
+		.center_title{
+			display: block;
+			text-transform: uppercase;
+			padding: 10px 0;
+			border-bottom: 1px dashed #ccc;
+		}
+		ul{
+			// margin-top: 30px;
+			text-align: left;
+			display: inline-block;
+			margin: 30px auto;
+			li{
+				margin: 20px 0;
+				img{
+					vertical-align: middle;
+					width: 30px;
+					margin-right: 10px;
+					/* margin-top: 10px; */
+				}
+				.as_we_working{
+				// padding: 20px 0;
+				display: inline-block;
+				text-transform: uppercase;
+				vertical-align: -webkit-baseline-middle;
+				@include mobile_m{
+					font-size: 12px;
+				}
+			}
+		}
+		}
+	}
+}
+.coose_our{
+	padding: 30px 0;
+	margin-top: 35px;
+	background: orange;
+	color: #fff;
+	text-align: center;
+	height: auto;
+		.choose_head{
+			margin: 10px 0;
+			text-transform: uppercase;
+		}
+		.choose_desc{
+			margin: 10px 0;
+		}
+		.send_need{
+			display: inline-block;
+			margin: 10px 0;
+			padding: 10px 5px;
+			border: 1px solid #fff;
+			color: #fff;
+			@include bradius(2px);
+		}
 }
 
 
