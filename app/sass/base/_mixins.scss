@@ -4,6 +4,13 @@
   -o-transition:      all $time ease-in-out;
   transition:         all $time ease-in-out;
 }
+
+@mixin transition-duration($time){
+  -webkit-transition-duration: all $time ease;
+  -moz-transition-duration:    all $time ease;
+  -o-transition-duration:      all $time ease;
+  transition-duration:         all $time ease;
+}
 @mixin clr {
   &:after, &:before {
     content: " ";

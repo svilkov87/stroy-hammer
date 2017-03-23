@@ -108,109 +108,117 @@ body{
   }
 }
 //главная
-.nav{
+.nav {
   height: auto;
   color: #68717c;
   width: 100%;
-	.logo_block{
-		height: auto;
-      img{
+  .logo_block {
+    height: auto;
+    img {
+      float: left;
+      height: 75px;
+      @include mobile_m {
+        height: 50px;
+      }
+    }
+    p.logo_p {
+      line-height: 80px;
+      font-size: 35px;
+      text-transform: uppercase;
+      font-weight: bold;
+      @include mobile_m {
+        line-height: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+  .nav_info {
+    float: right;
+    height: auto;
+    @include mobile_l {
+      float: none;
+    }
+    .adress_info {
+      margin-top: 25px;
+      @include mobile_l {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .nav_bottom {
+    height: 60px;
+    background: $navbg;
+    .fa-bars {
+      color: $navcolor_font;
+      line-height: 60px;
+      display: none;
+      @include mobile_l {
+        display: block;
+        margin-left: 15px;
+      }
+    }
+    .ul_menu {
+      float: left;
+      display: block;
+      @include mobile_l {
+        display: none;
+        background: #444050;
+        width: 100%;
+        padding-bottom: 20px;
+        position: absolute;
+        z-index: 99789999999999999;
+      }
+      .li_nav {
         float: left;
-        height: 75px;
-        @include mobile_m {
-          height: 50px;
+        margin-right: 5px;
+        .ul_child_serv {
+          display: none;
+          position: absolute;
+          z-index: 9999;
+          .li_serv {
+            a {
+              background: #8c878c;
+              line-height: 30px;
+              padding: 5px 10px;
+              // color: #fff;
+              &:hover {
+                background: #a6a6a6;
+                color: #000;
+              }
+            }
+          }
+        }
+        @include mobile_l {
+          float: none;
+        }
+        a {
+          display: block;
+          line-height: 60px;
+          padding: 0 10px;
+          color: $navcolor_font;;
+          text-transform: uppercase;
+          @include mobile_l {
+            line-height: 0;
+            padding: 15px;
+          }
+          &:hover {
+            background: #8c878c;
+            color: #000;
+          }
         }
       }
-		p.logo_p{
-			line-height: 80px;
-			font-size: 35px;
-			text-transform: uppercase;
-			font-weight: bold;
-          @include mobile_m {
-            line-height: 50px;
-            font-size: 20px;
-          }
-		}
-	}
-	.nav_info{
-		float: right;
-		height: auto;
-		@include mobile_l{
-			float: none;
-		}
-		.adress_info{
-			margin-top: 25px;
-			@include mobile_l{
-				margin: 10px 0;
-			}
-		}
-	}
-	.nav_bottom{
-		height: 60px;
-		background: #444050;
-		.fa-bars{
-			color: #fff;
-			line-height: 60px;
-			display: none;
-			@include mobile_l{
-				display: block;
-				margin-left: 15px;
-			}
-		}
-		.ul_menu{
-			float: left;
-			display: block;
-			@include mobile_l {
-				display: none;
-				background: #444050;
-				width: 100%;
-				padding-bottom: 20px;
-				position: absolute;
-				z-index: 99789999999999999;
-			}
-			.li_nav{
-				float: left;
-				margin-right: 5px;
-              .ul_child_serv{
-                display: none;
-                position: absolute;
-                z-index: 9999;
-                //background: #444050;
-                .li_serv{
-                  a{
-                    background: #8c878c;
-                    line-height: 30px;
-                    padding: 5px 10px;
-                    // color: #fff;
-                    &:hover{
-                      background: #ffd880;
-                      color: #000;
-                    }
-                  }
-                }
-              }
-				@include mobile_l{
-					float: none;
-				}
-				a{
-					display: block;
-					line-height: 60px;
-					padding: 0 10px;
-					color: #c9c3c3;
-					text-transform: uppercase;
-					@include mobile_l{
-						line-height: 0;
-						padding: 15px;
-					}
-					&:hover{
-						background: #8c878c;
-						color: #000;
-					}
-				}
-			}
-		}
-	}
+    }
+  }
+  .fixed_down {
+    @include transition(0.5s);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+  }
 }
+
 //slider
 .wrapp_slider {
   .bxslider {

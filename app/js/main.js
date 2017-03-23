@@ -30,7 +30,7 @@ $(document).ready(function(){
     },
         function() {
           $(this).css("background", "#444050");
-          $('a', this).css("color", "#c9c3c3");
+          $('a', this).css("color", "#ffbc00");
           $('ul:first', this).slideUp(150);
         }
     );
@@ -72,18 +72,6 @@ $(document).ready(function(){
     });
   });
 
-    $(".serv").click(function() {
-    $.scrollTo($(".one-footer"), 800, {
-      offset: 0
-    });
-  });
-    $(".serv2").click(function() {
-    $.scrollTo($(".two-footer"), 800, {
-      offset: 0
-    });
-  });
-
-    
     //modal
     var modal = document.getElementById('myModlal'),
         btnModal = document.getElementsByClassName('send_need')[0],
@@ -127,10 +115,12 @@ $(document).ready(function(){
     //фиксированный нав
     $(window).scroll(function() {
         if ($(this).scrollTop() > 150){
-            $('.nav').addClass("fixed");
+            $('.nav_bottom').addClass("fixed_down");
+            $('.nav').css("margin-bottom", "60px");
         }
         else{
-            $('.nav').removeClass("fixed");
+            $('.nav_bottom').removeClass("fixed_down");
+            $('.nav').css("margin-bottom", "0");
         }
     });
 
