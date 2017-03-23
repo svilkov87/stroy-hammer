@@ -398,6 +398,30 @@ body{
 			@include bradius(2px);
 		}
 }
-
+.main_gifts{
+  padding: 30px 0;
+  margin-top: 35px;
+  background: #fff;
+  text-align: center;
+  height: auto;
+  .gifts_head{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+  }
+  .gifts_desc{
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  .get_gift_link{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    @include bradius(2px);
+  }
+}
 
 
